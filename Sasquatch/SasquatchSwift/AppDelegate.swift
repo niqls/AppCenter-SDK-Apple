@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSCrashesDelegate, MSDist
     }
 
     // Start App Center SDK.
-    let appSecret = "0dbca56b-b9ae-4d53-856a-7c2856137d85"
+    let appSecret = "21d2871d-d7c3-baad-3c00-5ad754fb708b"
     let services = [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self]
     let startTarget = StartupMode(rawValue: UserDefaults.standard.integer(forKey: kMSStartTargetKey))!
     switch startTarget {
@@ -277,14 +277,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSCrashesDelegate, MSDist
 
   // AppCenter Push Delegate
   func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
-    
+
     // Alert in foreground if requested from custom data.
     if #available(iOS 10.0, *), notificationPresentationCompletionHandler != nil && pushNotification.customData["presentation"] == "alert" {
       (notificationPresentationCompletionHandler as! (UNNotificationPresentationOptions) -> Void)(.alert)
       notificationPresentationCompletionHandler = nil
       return;
     }
-    
+
     // Create and show a popup from the notification payload.
     let title: String = pushNotification.title ?? ""
     var message: String = pushNotification.message ?? ""
@@ -313,7 +313,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSCrashesDelegate, MSDist
       // Show the alert controller.
       self.window?.rootViewController?.present(alertController, animated: true)
     }
-    
+
     // Call notification completion handlers.
     if #available(iOS 10.0, *) {
       if (notificationResponseCompletionHandler != nil){
