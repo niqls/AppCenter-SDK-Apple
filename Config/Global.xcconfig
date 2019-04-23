@@ -1,6 +1,7 @@
 #include "./Version.xcconfig"
 
 // :Mark: Architectures
+ARCHS = ("$(ARCHS_STANDARD)",arm64e,);
 MS_WATCH_ARCHS = armv7k arm64_32
 MS_SIM_ARCHS = x86_64 i386
 SDKROOT = iphoneos
@@ -27,7 +28,7 @@ ALWAYS_SEARCH_USER_PATHS = NO
 USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../AppCenter/AppCenter"/**
 
 // :Mark: Code signing
-CODE_SIGN_IDENTITY = 
+CODE_SIGN_IDENTITY =
 
 // :Mark: Linking
 DEAD_CODE_STRIPPING = NO
