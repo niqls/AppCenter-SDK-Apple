@@ -2459,6 +2459,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8B224862113163D0052350E /* Sasquatch Debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 			};
 			name = Debug;
 		};
@@ -2466,6 +2470,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8B8EB15211070BE004BCECB /* Sasquatch.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 			};
 			name = Release;
 		};
